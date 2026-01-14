@@ -92,6 +92,36 @@ python generate_polarized_scenes.py
 *   **`POLARIZER_CFG.distance_fraction`**: Fractional distance from light to scene where the polarizer is placed.
 *   **`POLARIZER_CFG.size_factor`**: Scale factor for polarizer disk size.
 
+#### Example Configuration (Small Test)
+
+To do a quick sanity check without generating the full dataset, use small values:
+
+```python
+ASSET_DIR = Path(r"/path/to/models")
+MATERIAL_DIR = Path(r"/path/to/materials")
+OUTPUT_DIR = Path(__file__).resolve().parent / "data_polarized_test"
+
+NUM_SCENES = 3
+IMAGE_RES = 256
+SAMPLES_PER_PIXEL = 32
+RENDER_TIMEOUT_SEC = 600
+```
+
+#### Sample Outputs
+
+After running `generate_polarized_scenes.py`, you should see:
+
+```
+data_polarized_test/
+  scene_00001_stokes.exr
+  scene_00001_normal.exr
+  scene_00002_stokes.exr
+  scene_00002_normal.exr
+  scene_00003_stokes.exr
+  scene_00003_normal.exr
+  materials_log.json
+```
+
 ### 2. Visualization
 
 Open `visualize_stokes.py` and configure the input directory at the bottom of the file:
@@ -123,3 +153,11 @@ This will create a `visualization` subdirectory within your input directory cont
 
 *   **Missing Assets**: Ensure `ASSET_DIR` and `MATERIAL_DIR` point to valid directories with `.obj` files and texture maps respectively.
 *   **Mitsuba Variant**: Ensure your Mitsuba installation supports the `cuda_ad_spectral_polarized` variant.
+
+## License
+
+MIT License. See `LICENSE`.
+
+## Citation
+
+If you use this code in academic work, please cite it. See `CITATION.cff`.

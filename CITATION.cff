@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "Polarized Scene Generation and Visualization"
+authors:
+  - family-names: "Li"
+    given-names: "Jiarong"
+date-released: 2026-01-14
+license: "MIT"
+repository-code: "https://github.com/hsadkzomx/polarized-scene-generation"
+url: "https://github.com/hsadkzomx/polarized-scene-generation"
