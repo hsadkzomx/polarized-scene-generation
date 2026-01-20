@@ -86,9 +86,6 @@ python generate_polarized_scenes.py
 *   **`LIGHT_CFG.num_lights`**: Number of point lights (RGB-balanced in pairs).
 *   **`LIGHT_CFG.distance_scale`**: Light distance multiplier from the scene.
 *   **`LIGHT_CFG.cos_theta_min` / `cos_theta_max`**: Reserved (not used in current sampling).
-*   **`BLIND_LIGHT_CFG.enabled`**: Add a directional “blind” light.
-*   **`BLIND_LIGHT_CFG.irradiance`**: Irradiance spectrum and scale for the blind light.
-*   **`BLIND_LIGHT_CFG.require_up`**: Constrain blind light direction relative to camera up.
 *   **`POLARIZER_CFG.distance_fraction`**: Fractional distance from light to scene where the polarizer is placed.
 *   **`POLARIZER_CFG.size_factor`**: Scale factor for polarizer disk size.
 
